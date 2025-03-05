@@ -22,7 +22,7 @@ app.get("/", (req, res) => {
 
 
 app.get("/back", (req, res) => {
-    res.json({ auth: auth });
+    res.json({ auth: auth_code });
 });
 app.listen(3000, "0.0.0.0", () => {
     console.log("Server running on port 3000");
