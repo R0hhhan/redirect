@@ -6,9 +6,11 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json());
 app.get("/", (req, res) => {
 
-    const auth = req.params.auth_code;
+    const auth = req.query.auth_code;
     console.log(auth);
-    console.log(req);
+    console.log(req.query);
+    console.log(req.body);
+    console.log(req.params);
     res.send("hey there we are active")
 });
 
