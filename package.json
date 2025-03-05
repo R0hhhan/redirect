@@ -2,5 +2,9 @@
   "dependencies": {
     "express": "^4.21.2",
     "nodemon": "^3.1.9"
+  },
+  "scripts": {
+    "start": "node redirect.js",
+    "dev": "nodemon redirect.js"
   }
 }
