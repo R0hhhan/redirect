@@ -8,6 +8,7 @@ app.get("/", (req, res) => {
 
     const auth = req.params.auth_code;
     console.log(auth);
+    console.log(req);
     res.send("hey there we are active")
 });
 
