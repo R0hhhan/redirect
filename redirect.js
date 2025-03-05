@@ -10,11 +10,12 @@ let auth_code = -1;
 app.get("/", (req, res) => {
 
     const auth = req.query.auth_code;
-    console.log(auth);
+
     res.send("hey there we are active")
 
-    auth_code = auth;
-
+    if (auth) {
+        auth_code = auth;
+    }
     setTimeout(() => {
         auth_code = -1;
     }, 1000000);
