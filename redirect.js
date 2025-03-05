@@ -7,6 +7,8 @@ app.use(express.json());
 app.get("/", (req, res) => {
 
     const auth = req.params.auth_code;
+    console.log(auth);
+    res.send("hey there we are active")
 });
 
 app.listen(3000, "0.0.0.0", () => {
