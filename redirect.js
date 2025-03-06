@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 
-let auth_code = -1;
+let auth_code = -"1";
 
 app.get("/", (req, res) => {
 
@@ -17,12 +17,16 @@ app.get("/", (req, res) => {
         auth_code = auth;
     }
     setTimeout(() => {
-        auth_code = -1;
-    }, 1000000);
+        auth_code = "-1";
+    }, 100000);
 });
 
 
 app.get("/back", (req, res) => {
+
+    setTimeout(() => {
+        auth_code = "-1";
+    }, 1000);
     res.send({ auth: auth_code });
 });
 
