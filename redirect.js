@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 3000;
 
 app.use(express.json());
 
-let auth_code = -"1";
+let auth_code = -1;
 let used_code = false;
 
 app.get("/", (req, res) => {
@@ -19,7 +19,7 @@ app.get("/", (req, res) => {
         used_code = false;
     }
     setTimeout(() => {
-        auth_code = "-1";
+        auth_code = -1;
         used_code = false;
     }, 100000);
 });
